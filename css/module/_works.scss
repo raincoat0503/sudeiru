@@ -1,0 +1,58 @@
+.works{
+    width: 80vw;
+    margin: 0 auto;
+    a{
+        color: #000;
+    }
+    article{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    section{
+        width: 400px;
+        max-width: 90vw;
+        height: 300px;
+        background: #000;
+        margin: 0 50px 50px 50px;
+        &:first-child{
+            margin-top: 0;
+        }
+        .cover{
+            transition: background 0.3s ease-out 100ms
+        }
+        .hover{
+            transition: opacity 0.4s ease-out 100ms
+        }
+        &:hover{
+            .cover{
+                background: rgba(255, 255, 255, 0.6);
+            }
+            .hover{
+                opacity: 1;
+            }
+        }
+    }
+    &_cover{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    &_item{
+        position: relative;
+        img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &_textarea{
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        opacity: 0;
+    }
+}
